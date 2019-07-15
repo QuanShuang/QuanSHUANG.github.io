@@ -71,7 +71,7 @@ jQuery(document).on('ready', function ($) {
         nav: true,
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 4500,
         margin: 0,
         /*animateIn: 'fadeIn',
         animateOut: 'fadeOut',*/
@@ -106,7 +106,7 @@ jQuery(document).on('ready', function ($) {
         MICHIMP INTEGRATION
     -----------------------------*/
     $('#mc-form').ajaxChimp({
-        url: 'http://intimissibd.us14.list-manage.com/subscribe/post?u=a77a312486b6e42518623c58a&amp;id=4af1f9af4c', //Set Your Mailchamp URL
+        url: 'https://elitemaple.com/?utm_source=google&utm_medium=email&utm_campaign=sale', //Set Your Mailchamp URL
         callback: function (resp) {
             if (resp.result === 'success') {
                 $('.subscriber-form input, .subscriber-form button').hide();
