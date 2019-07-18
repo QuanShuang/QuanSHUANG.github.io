@@ -21,6 +21,8 @@
     <link href="assest/css/plugins.css" rel="stylesheet">
     <link href="assest/css/theme.css" rel="stylesheet">
     <link href="assest/css/icons.css" rel="stylesheet">
+    <link href="assest/css/Popup.css" rel="stylesheet">
+    <link href="assest/css/card.css" rel="stylesheet">
 
     <!--====== MAIN STYLESHEETS ======-->
     <link href="style.css" rel="stylesheet">
@@ -50,7 +52,11 @@
                     <div class="container">
                         <div class="navbar-header">
                             <a href="#home" class="navbar-brand"><img src="assest/img/logo.png" alt="logo"></a>
-                        </div>
+                        </div>                      
+                          
+                        <!-- Google translate option -->
+                        <div id="google_translate_element"></div>
+
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav pull-right">
                                 <li class="active"><a href="#home">Home</a></li>
@@ -58,13 +64,16 @@
                                 <li><a href="#courses">About</a></li>
                                 <li><a href="#testmonial">Housing</a></li>
                                 <li><a href="#blog">VISA</a></li>
-                                <!-- <li><a href="#faqs">Faqs</a></li> -->
                                 <li><a href="#contact">Contact</a></li>
+                                <!-- <li><a href="#faqs">Translate</a></li> -->
                             </ul>
                         </div>
+                        
                     </div>
                 </nav>
             </div>
+            
+            
             <!--END MAINMENU AREA END-->
         </div>
 
@@ -420,8 +429,8 @@
                             <a href="blog.html"><img src="assest/img/blog/blog-1.jpg" alt=""></a>
                         </div>
                         <div class="blog-details padding30">
-                            <!-- <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p> -->
+                            <!-- <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3> 
+                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>  -->
                         </div>
                     </div>
                 </div>
@@ -483,15 +492,29 @@
     </section>
     <!--FAQS AREA END-->
 
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- End Adding icon library -->
+
+
     <!--CONTACT US AREA-->
     <section class="contact-area sky-gray-bg" id="contact">
         <div class="container-fluid no-padding">
             <div class="row no-margin">
-                <div class="no-padding col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                    <!-- <div class="map-area relative">
-                        <div id="map" style="width: 100%; height: 600px;"> </div>
-                    </div> -->
-                </div>
+                <div class="no-padding col-md-6 col-lg-6 col-sm-12 col-xs-12">   
+                    <div class="card">
+                        <img src="assest/img/Tlogo.png" alt="John" style="width:100%">
+                        <h1>David & Jakie </h1>
+                        <p class="title">+1 647-896-6266</p>
+                        <p class="title">+1 647-996-9158</p>
+                        <p>EliteMaple@gmail.com</p>
+                        <a href="#"><i class="fa fa-dribbble"></i></a> 
+                        <a href="#"><i class="fa fa-twitter"></i></a> 
+                        <a href="#"><i class="fa fa-linkedin"></i></a> 
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                </div> 
                 <div class="no-padding col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="contact-form-content padding50 xs-padding20">
                         <div class="contact-title wow fadeIn">
@@ -565,7 +588,7 @@
                             <img src="assest/img/client/client-5.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-6.png" alt="">
+                            <img src="assest/img/client/client-6.jpg" alt="">
                         </div>
                         <div class="single-client">
                             <img src="assest/img/client/client-7.png" alt="">
@@ -574,7 +597,7 @@
                             <img src="assest/img/client/client-8.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-9.png" alt="">
+                            <img src="assest/img/client/client-9.jpg" alt="">
                         </div>
                         <div class="single-client">
                             <img src="assest/img/client/client-10.png" alt="">
@@ -586,6 +609,7 @@
     </div>
     <!--CLIENT AREA END-->
 
+
     <!--ADDMISSION AREA-->
     <section class="admition-area padding-50-50 bg-theme">
         <div class="container">
@@ -596,13 +620,12 @@
                         <p>Ask any questions from living in North America, studying in Europe, or even shopping locally! </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                    <div class="enroll-button right xs-center">
-                        <a href="#">Call us Now</a>
+                <div class="popup" onclick="myFunction()">   Call us now!
+                        <span class="popuptext" id="myPopup">+1 647-896-6266</span>
+                      </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            
     </section>
     <!--ADDMISSION AREA END-->
 
@@ -666,6 +689,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
     <!--FOOER AREA END-->
+
+    
+    <!--Build up Popup function-->
+    <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+            </script>
+    <!--Popup function END-->
+
+    <!--Build up Translate function-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!--Translate function End -->
 
 
     <!--====== SCRIPTS JS ======-->
