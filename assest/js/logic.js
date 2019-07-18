@@ -1,5 +1,5 @@
 // Store our API endpoint
-var earthquakeUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.geojson";
+var earthquakeUrl = "../../resources/listing_trans.json";
 var platesUrl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
 
 // Perform a GET request to above Earthquake and Fraxen url queries
@@ -32,16 +32,16 @@ function createFeatures(earthquakeData, plateData) {
   // Function to run once to render each feature in earthquake data
   // Give each earthquake a popup describing the occurance location and time
   function onEachEarthquake(feature, layer) {
-    layer.bindPopup("<h4>" + feature.properties.place +
-      "<br>Magnitude: " + feature.properties.mag + 
-      "</h4><hr><p>" + new Date(feature.properties.time) + "</p>");
+    layer.bindPopup("<h4>" + feature.properties.house_type +
+      "<br>Magnitude: " + feature.properties.price + 
+      "</h4><hr>");
   }
 
   // Assign marker to each earthquake
   function onEachQuakeLayer (feature, latlng) {
     return new L.circle(latlng, {
-      radius: getRadius(feature.properties.mag),
-      fillColor: getColor(feature.properties.mag),
+      radius: getRadius(feature.properties.price),
+      fillColor: getColor(feature.properties.price),
       fillOpacity: 0.8,
       stroke: false,
     });
