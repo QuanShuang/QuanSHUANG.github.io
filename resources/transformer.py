@@ -19,8 +19,8 @@ geojson = {
             "type": "Point",
             "coordinates": [d["lng"], d["lat"]],
             },
-        "properties" : d,
-     } for d in usable]
+            "properties" : {"price": float(d["price"].replace("M","").replace("K","")),"id_listing": d["id_listing"],"house_type": d["house_type"]}
+    }    for d in usable]
 }
 
 
