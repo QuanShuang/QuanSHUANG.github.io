@@ -32,7 +32,7 @@
     <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" /> -->
 
 </head>
 
@@ -66,8 +66,8 @@
                                 <li class="active"><a href="#home">Home</a></li>
                                 <li><a href="#features">Features</a></li>
                                 <li><a href="#courses">About</a></li>
-                                <li><a href="#testmonial">Housing</a></li>
-                                <li><a href="#blog">VISA</a></li>
+                                <li><a href="#testmonial">VISA</a></li>
+                                <li><a href="http://www.github.com">Housing</a></li>
                                 <li><a href="#contact">Contact</a></li>
                                 <!-- <li><a href="#faqs">Translate</a></li> -->
                             </ul>
@@ -385,12 +385,13 @@
 
     <!--BLOG AREA-->
     <section class="blog-feed-area padding-top" id="blog">
-        <div class="container">
+    
             <!-- The div that holds our map -->
-            <div id="mapid">
-                
-            </div>
-        </div>
+
+            <!-- Doesn't work since the geomap requires more space and cannot be put into canvas -->
+
+<!-- <div id="map"> </div> -->
+        
     </section>
     <!--BLOG AREA END-->
 
@@ -691,15 +692,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!--===== ACTIVE JS=====-->
     <script src="assest/js/main.js"></script>
 
-    <!--===== MAPS JS=====-->
-    <script src="assest/js/config.js"></script>
-    <script src="assest/js/logic.js"></script>
+    
+     <!-- D3 JavaScript -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script> -->
 
     <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-    <!-- D3 JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script> -->
 
+    <!-- ===== MAPS JS===== -->
+    <!-- <script src="assest/js/config.js"></script> -->
+    <!-- <script src="assest/js/logic.js"></script> -->
+
+   
 </body>
 
 </html>
