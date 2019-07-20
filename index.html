@@ -11,8 +11,10 @@
     <meta name="description" content="APPTON HTML5 Template is a simple Smooth Personal App Landing Template" />
     <meta name="keywords" content="App, Landing, Business, Onepage, Html, Business" />
 
+
+
     <!--====== TITLE TAG ======-->
-    <title>Elite Maple International</title>
+    <title>Elite Maple International Inc.</title>
 
     <!--====== FAVICON ICON =======-->
     <link rel="shortcut icon" type="image/ico" href="assest/img/favicon.png" />
@@ -30,6 +32,8 @@
     <link href="assest/css/responsive.css" rel="stylesheet">
 
     <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    
 
     <!-- Leaflet CSS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" /> -->
@@ -90,7 +94,7 @@
                         <div class="row flex-v-center">
                             <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
                                 <div class="welcome-text">
-                                    <h1>Help you suceed at starting line.</h1>
+                                    <h1>Your One-Stop Education Guide.</h1>
                                     <p>How do I choose an elementary school? How to choose a housing based on school?</p>
                                     <div class="home-button">
                                         <form action="#">
@@ -329,6 +333,7 @@
 
     <!--TESTMONIAL AREA AREA-->
     <section class="testmonial-area bg-theme section-padding" id="testmonial">
+             
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
@@ -385,6 +390,50 @@
 
     <!--BLOG AREA-->
     <section class="blog-feed-area padding-top" id="blog">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <div class="text-center wow fadeIn">
+                        <h1 id="countdown"></h1>
+                        <br><br>
+                        <h3 class="xs-font20 mb30">More Immigration Analysis Coming Soon!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+        // Set the date we're counting down to
+            var countDownDate = new Date("Jul 30, 2019 18:00:00").getTime();
+
+        // Update the count down every 1 second
+            var x = setInterval(function() {
+
+        // Get today's date and time
+            var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+        // Output the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+            
+        // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+                }, 1000);
+        </script>
     
             <!-- The div that holds our map -->
 
